@@ -26,7 +26,6 @@ public class MyFilter extends ZuulFilter{
 
     @Override
     public Object run() {
-        System.out.println("test");
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         Object token = request.getParameter("token");
